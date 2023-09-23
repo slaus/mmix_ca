@@ -1,0 +1,33 @@
+@@include('./html/_head.html')
+
+<body class="main__body portfolio-page">
+    <!-- Прелоадер -->
+    <div id="preloader">
+        <div id="loader"></div>
+        <span>Loading</span>
+    </div>
+    <div id="content"></div>
+    <!-- Header -->
+    @@include('./html/_header.html')
+    <!-- Main Page -->
+    <main>
+        <section class="section breadcrumbs__section">
+            <div class="container">
+                <nav aria-label="Breadcrumb" class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Home</a></li>
+                        <li class="breadcrumbs__item"><span aria-current="page" class="breadcrumbs__current">Portfolio</span></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        @@include('./html/_folioheader.html')
+        @@include('./html/_foliotab.html')
+        @@include('./html/_stepform.html')
+        @@include('./html/_locations.html')
+    </main>
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+</body>
+
+@@include('./html/_script.html')
