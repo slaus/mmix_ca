@@ -1,0 +1,193 @@
+.salesblock {
+    position: relative;
+    display: flex;
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+    }
+
+    &__section {}
+
+    &__top {
+        position: sticky;
+        top: 10px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: calc($index * 2);
+        padding-bottom: 30px;
+        width: 50%;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        padding-right: 10%;
+        // font-size: calc($index * 1.25);
+        // line-height: calc($index * 1.85);
+
+        @media screen and (max-width: 991px) {
+            font-size: 32px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 26px;
+            width: 100%;
+            text-align: center;
+        }
+
+        span,b,strong {
+            color: $red;
+            font-weight: 500;
+        }
+    }
+
+    &__description {
+        display: block;
+        line-height: 150%;
+        padding-right: 10%;
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        span {
+            color: $red;
+        }
+
+        .discuss {
+            margin-top: 30px;
+
+            @media screen and (max-width: 576px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (max-width: 991px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        // justify-content: center;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 991px) {
+            flex: 0 1 calc(50% - 15px);
+        }
+
+        @media screen and (max-width: 767px) {
+            flex: 0 1 100%;
+        }
+
+        &:hover {
+            .salesblock__info {
+                background: $red;
+            }
+
+            .salesblock__subtitle {
+                color: $white;
+            }
+
+            .salesblock__text {
+                color: $white;
+            }
+        }
+    }
+
+    &__info {
+        border-radius: 20px;
+        background: #F2F2F2;
+        backdrop-filter: blur(12px);
+        padding: 30px;
+        transform: translateY(-150px);
+        margin-bottom: -150px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: all .5s ease;
+
+
+        @media screen and (max-width: 991px) {
+            transform: translateY(-100px);
+            margin-bottom: -100px;
+        }
+
+        @media screen and (max-width: 768px) {
+            transform: translateY(-150px);
+            margin-bottom: -150px;
+        }
+
+        @media screen and (max-width: 576px) {
+            transform: translateY(-100px);
+            margin-bottom: -100px;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        margin: 0 30px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+    &__subtitle {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 100%;
+        font-family: $fontSecondary;
+        transition: all .5s ease;
+        color: $red;
+        font-size: 24px;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

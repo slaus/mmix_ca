@@ -1,0 +1,47 @@
+// Global SCSS-files imports
+@import './vars';
+@import './reset';
+@import './global';
+
+// Sections or Pages SCSS-files imports
+@import './home';
+@import './swiper';
+@import './discuss';
+@import './breadcrumbs';
+@import './header';
+@import './moto';
+@import './about';
+@import './team';
+@import './intro';
+@import './services';
+@import './portfolio';
+@import './slider';
+@import './pagination';
+@import './stepform';
+@import './news';
+@import './partners';
+@import './testimonial';
+@import './accordion';
+@import './locations';
+@import './footer';
+@import './blogtab';
+@import './foliotab';
+@import './folioheader';
+@import './articles';
+@import './article';
+@import './textblock';
+@import './salesblock';
+@import './consult';
+@import './faq';
+@import './headerblock';
+@import './scrollblock';
+@import './tableblock';
+@import './structureblock';
+@import './siteblock';
+@import './case';
+@import './gallery';
+@import './hoverblock';
+@import './404';
+
+// Libs
+// @import './libs/swiper';

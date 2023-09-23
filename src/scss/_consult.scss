@@ -1,0 +1,168 @@
+.consult {
+
+    &__section {
+        border-radius: 30px 30px 0 0;
+        background: $red;
+        color: $white;
+        padding: 100px 0 60px;
+        position: relative;
+
+        &+.locations__section {
+            border-radius: 0;
+        }
+    }
+
+    &__top {
+        position: relative;
+        display: flex;
+        gap: calc($index * 2);
+        // padding-bottom: 50px;
+        z-index: 1;
+
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: calc(62% - 15px);
+        padding-right: 10%;
+        // font-size: calc($index * 1.25);
+        // line-height: calc($index * 1.85);
+
+        @media screen and (max-width: 991px) {
+            font-size: 32px;
+            padding-right: 0;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 26px;
+            width: 100%;
+            text-align: center;
+        }
+
+        span,b,strong {
+            color: $black;
+            font-weight: 500;
+        }
+    }
+
+    &__description {
+        display: block;
+        width: calc(38% + 15px);
+        line-height: 150%;
+
+        span {
+            color: $red;
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .form__step-block--item {
+        border-bottom: 1px solid $white;
+
+        label {
+            opacity: .7;
+            color: $white;
+            
+                    span {
+                        color: $white;
+                    }
+        }
+
+        .input__step {
+            color: #fff;
+        }
+    }
+
+    .filled {
+        background: $red;
+    }
+
+    .discuss {
+        background: transparent;
+        margin-left: auto;
+        margin-top: 30px;
+
+        &:hover {
+            .discuss__block {
+                color: $black;
+
+                span {
+                    background: $black;
+                    border-color: $black;
+                }
+            }
+
+            .discuss__img {
+                filter: invert(6%) sepia(5%) saturate(20%) hue-rotate(324deg) brightness(102%) contrast(84%);
+            }
+        }
+
+        &__img {
+            filter: invert(100%) sepia(5%) saturate(27%) hue-rotate(323deg) brightness(201%) contrast(100%);
+        }
+
+        .discuss__block {
+            color: $white;
+
+            span {
+                background: $white;
+                border-color: $white;
+            }
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(-30%, -35%);
+            width: 150px;
+            height: 140px;
+            // filter: blur(1px);
+
+            &:nth-child(2) {
+                left: unset;
+                right: 0;
+                transform: translate(-30%, -40%);
+                filter: blur(2px);
+            }
+            &:nth-child(3) {
+                left: unset;
+                top: unset;
+                right: 0;
+                bottom: 0;
+                transform: translate(30%, 30%);
+                filter: blur(3px);
+            }
+        }
+    }
+}

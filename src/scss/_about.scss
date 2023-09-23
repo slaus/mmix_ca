@@ -1,0 +1,215 @@
+.about {
+    background: $black;
+    color: $white;
+    border-radius: 30px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 991px) {
+        padding: 40px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 30px;
+    }
+
+    &__top {
+        position: relative;
+        display: flex;
+        gap: calc($index * 4);
+        padding-bottom: 50px;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: 60%;
+
+        @media screen and (max-width: 991px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 26px;
+            width: 100%;
+            text-align: center;
+        }
+
+        span,b,strong {
+            color: $red;
+            font-weight: 500;
+        }
+    }
+
+    &__description {
+        display: block;
+        width: 40%;
+        line-height: 150%;
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__name {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        font-family: $fontSecondary;
+        font-size: 126px;
+        font-size: calc($index * 5);
+        font-weight: 600;
+        line-height: 150%;
+        letter-spacing: 11px;
+        text-transform: uppercase;
+        opacity: 0.08;
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 0;
+        white-space: nowrap;
+
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 30px;
+        z-index: 1;
+
+        @media screen and (max-width: 991px) {
+            grid-template-columns: 100%;
+            gap: 0;
+        }
+    }
+
+    &__image {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+
+        @media screen and (max-width: 991px) {
+            height: 480px;
+            display: block;
+            overflow: unset;
+        }
+    }
+
+    &__mask {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: fit-content;
+        left: 0;
+        top: 0;
+        mask-image: url('../img/mask-about-1.png');
+        mask-repeat: no-repeat;
+        mask-size: 100% 601px;
+        overflow: hidden;
+
+        @media screen and (max-width: 991px) {
+            mask-image: url('../img/mask-about-2.png');
+            position: relative;
+            mask-size: 100% 451px;
+        }
+
+        @media screen and (max-width: 576px) {
+            mask-image: url('../img/mask-about-3.png');
+            position: relative;
+            mask-size: 100% 280px;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+
+    &__block {
+        position: absolute;
+        right: 8px;
+        bottom: 0;
+        // top: calc($index * 15.4);
+        // top: 67%;
+        border-radius: 30px;
+        border: 2px solid $white;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 58%;
+        // width: calc($index * 9.2);
+
+        @media screen and (max-width: 991px) {
+            bottom: 30px;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            right: 0;
+        }
+
+        &-title {
+            font-size: 19px;
+            font-weight: 600;
+
+            span {
+                font-size: 27px;
+                font-family: $fontSecondary;
+                color: $red;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+        }
+
+        &-text {
+            margin-top: 10px;
+            line-height: 150%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        line-height: 150%;
+
+        @media screen and (max-width: 991px) {
+            font-size: 22px;
+        }
+    
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+        }
+    
+        @media screen and (max-width: 576px) {
+            font-size: 18px;
+        }
+
+        span {
+            color: $red;
+        }
+
+        p+p {
+            margin-top: calc($index);
+        }
+    }
+}

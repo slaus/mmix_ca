@@ -1,0 +1,199 @@
+.locations {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    &__section {
+        border-radius: 30px 30px 0px 0px;
+        background: $black;
+        padding: 100px 0 60px;
+    }
+
+    &__title {
+        font-size: 64px;
+
+        @media screen and (max-width: 991px) {
+            font-size: 56px;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 42px;
+        }
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+        }
+    }
+
+    &__top {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $index;
+
+        @media screen and (max-width: 576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__block {
+        color: $white;
+        margin: 20px 0;
+        display: inline-block;
+        width: 100%;
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+        }
+
+        span {
+            opacity: .5;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        a {
+            font-size: 26px;
+            color: $white;
+            font-family: $fontSecondary;
+            transition: all .5s ease;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    &__social {
+        display: inline-flex;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px 0;
+
+        @media screen and (max-width: 576px) {
+            justify-content: center;
+        }
+
+        a {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $white;
+            border-radius: 10px;
+            transition: all .5s ease;
+
+            &:hover {
+                border: 1px solid $red;
+
+                img {
+                    filter: invert(70%) sepia(65%) saturate(2796%) hue-rotate(345deg) brightness(111%) contrast(102%);
+                }
+            }
+
+            img {
+                filter: unset;
+                transition: all .2s ease;
+            }
+        }
+
+        a+a {
+            margin-left: 25px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    &__menu {
+        width: 50%;
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 767px) {
+            width: 30%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__map {
+        width: 50%;
+        height: 220px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        flex: 1 1 auto;
+
+        @media screen and (max-width: 767px) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media screen and (max-width: 991px) {
+            position: relative;
+            height: auto;
+        }
+
+        &__item {
+            font-family: $fontSecondary;
+            display: block;
+            width: calc(50% - 15px);
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 100%;
+
+            }
+        }
+
+        &__link {
+            font-size: 26px;
+            font-weight: 500;
+            color: $white;
+            line-height: 150%;
+            transition: all .5s ease;
+
+            @media screen and (max-width: 767px) {
+                line-height: 120%;
+            }
+
+            @media screen and (max-width: 576px) {
+                text-align: center;
+                display: block;
+            }
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+.headerblock {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column-reverse;
+    }
+
+    &__section {}
+
+    &__top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: calc($index * 2);
+        padding-bottom: 50px;
+        width: 62%;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: 100%;
+        padding-right: 10%;
+        // font-size: calc($index * 1.25);
+        // line-height: calc($index * 1.85);
+
+        @media screen and (max-width: 991px) {
+            font-size: 32px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 26px;
+            width: 100%;
+            text-align: center;
+        }
+
+        span,b,strong {
+            color: $red;
+            font-weight: 500;
+        }
+    }
+
+    &__subtitle {
+        color: $red;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: -40px;
+
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            margin-bottom: -30px;
+        }
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: -20px;
+        }
+
+        img {
+            margin-right: 10px;
+            transform: translateY(5px);
+        }
+    }
+
+    &__description {
+        display: block;
+        width: 55%;
+        line-height: 150%;
+        border-top: 1px solid #d4d4d4;
+        padding-top: calc($index / 2);
+
+        @media screen and (max-width: 991px) {
+            width: 80%;
+        }
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        .discuss {
+            margin-top: $index;
+
+            @media screen and (max-width: 576px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__name {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        font-family: $fontSecondary;
+        font-size: 180px;
+        font-size: calc($index * 4.75);
+        font-weight: 600;
+        line-height: 90%;
+        letter-spacing: 11px;
+        text-transform: uppercase;
+        opacity: 0.08;
+        background: linear-gradient(180deg, #212121 30%, rgba(33, 33, 33, 0.3) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 0;
+        // white-space: nowrap;
+
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        z-index: 0;
+        width: 38%;
+
+        @media screen and (max-width: 576px) {
+            width: 50%;
+            margin-bottom: $index;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+
+            &:first-child {
+                position: relative;
+            }
+
+            &:nth-child(2) {
+                width: 180px;
+                height: 170px;
+                right: 0;
+                top: 0;
+                // filter: blur(3px);
+                opacity: .25;
+                transform: translate(25%, -25%);
+
+                @media screen and (max-width: 576px) {
+                    width: 120px;
+                    height: 100px;
+                    transform: translate(50%, -35%);
+                }
+            }
+
+            &:nth-child(3) {
+                width: 210px;
+                height: 190px;
+                right: 0;
+                bottom: 0;
+                opacity: .3;
+                // filter: blur(4px);
+                transform: translate(50%, 35%);
+
+                @media screen and (max-width: 576px) {
+                    width: 150px;
+                    height: 140px;
+                    transform: translate(70%, 15%);
+                }
+            }
+        }
+    }
+}

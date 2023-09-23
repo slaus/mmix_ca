@@ -1,0 +1,51 @@
+// Footer
+.footer {
+    color: $white;
+    padding-top: 30px;
+    border-top: 1px solid #f6f2e23d;
+    
+    &__section {
+        background: $black;
+        padding: 0 0 100px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+            gap: calc($index * 2);
+        }
+
+        li+li {
+            margin-left: 30px;
+
+            @media screen and (max-width: 576px) {
+                margin-left: 0;
+            }
+        }
+    }
+    &__item {
+        font-size: 20px;
+
+        @media screen and (max-width: 767px) {
+            order: 0;
+
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+    &__link {
+        color: $white;
+        opacity: .5;
+        transition: all .5s ease;
+
+        &:hover {
+            color: $red;
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.folioheader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+
+    @media screen and (max-width: 991px) {
+        flex-direction: column;
+    }
+
+    &__section {
+        position: relative;
+        overflow: hidden;
+        padding-top: calc($index * 1.5);
+        padding-bottom: calc($index * 5);
+        padding-bottom: 0;
+    }
+
+    &__top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: calc($index * 1.5);
+        width: 100%;
+
+        @media screen and (max-width: 1199px) {
+            width: 60%;
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 576px) {
+            // flex-direction: column;
+            // width: 100%;
+        }
+    }
+
+    &__img {
+        margin-bottom: -5px;
+        width: 100%;
+        max-width: fit-content;
+        height: auto;
+    }
+
+    &__title {
+        font-size: 160px;
+        font-size: calc($index * 5.55);
+        font-size: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: 100%;
+
+        @media screen and (max-width: 767px) {
+            font-size: 84px;
+            font-size: calc($index * 4.8);
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 56px;
+            font-size: calc($index * 3.8);
+            text-align: center;
+        }
+    }
+
+}

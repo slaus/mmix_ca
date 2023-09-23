@@ -1,0 +1,74 @@
+.siteblock {
+    position: relative;
+
+    &__section {}
+
+    &__top {
+        position: relative;
+        display: flex;
+        gap: calc($index);
+        width: 100%;
+
+        @media screen and (max-width: 576px) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 150%;
+        width: 100%;
+        padding-right: 20%;
+
+        @media screen and (max-width: 991px) {
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding-right: 0;
+        }
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+        }
+
+        span,b,strong {
+            color: $red;
+            font-weight: 500;
+        }
+    }
+
+    &__subtitle {
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+        }
+
+        img {
+            margin-top: 10px;
+            filter: invert(20%) sepia(65%) saturate(2796%) hue-rotate(345deg) brightness(111%) contrast(102%);
+        }
+    }
+
+    &__bottom {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        color: $black;
+        text-align: center;
+        font-family: $fontSecondary;
+        font-size: 22px;
+        transition: all .5s ease;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}

@@ -1,0 +1,309 @@
+.intro {
+    position: relative;
+
+    &__section {
+        position: relative;
+    }
+
+    &__animate {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+
+        &.mask {
+            mask-image: url('../img/union-superbig-fill.svg');
+            mask-size: 100% 433px;
+            mask-repeat: no-repeat;
+            mask-position: center center;
+
+            @media screen and (max-width: 991px) {
+                mask-image: url('../img/union-big-fill.svg');
+                mask-size: 100% 433px;
+            }
+
+            @media screen and (max-width: 767px) {
+                mask-image: url('../img/union-medium-fill.svg');
+                mask-size: 100% 433px;
+            }
+
+            @media screen and (max-width: 576px) {
+                mask-image: url('../img/union-small-fill.svg');
+                mask-size: 100% 398px;
+            }
+        }
+
+        .intro__canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+
+    &__svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url("../img/union-superbig-line.svg") center center no-repeat;
+        background-size: 100% 433px;
+        z-index: 1;
+
+        @media screen and (max-width: 991px) {
+            background: url("../img/union-big-line.svg") center center no-repeat;
+            background-size: 100% 433px;
+        }
+
+        @media screen and (max-width: 767px) {
+            mask-image: url('../img/union-medium-line.svg');
+            background-size: 100% 433px;
+        }
+
+        @media screen and (max-width: 576px) {
+            mask-image: url('../img/union-small-line.svg');
+            background-size: 100% 398px;
+        }
+    }
+
+    &__img {
+        width: auto;
+        height: 433px;
+        background: url("../img/union.jpg") center center no-repeat;
+        z-index: 0;
+    }
+
+    &__discuss {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        height: 40%;
+        left: 0;
+        top: 0;
+        // background: $white;
+        z-index: 2;
+
+        @media screen and (max-width: 991px) {
+            width: 38%;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 42%;
+        }
+
+        @media screen and (max-width: 576px) {
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+
+        .discuss {
+            margin-top: $index;
+
+            @media screen and (max-width: 576px) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    &__description {}
+
+    &__portfolio {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+        background: $black;
+        width: 23%;
+        height: 28%;
+        z-index: 2;
+
+        @media screen and (max-width: 991px) {
+            width: 27%;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 32%;
+        }
+        
+        @media screen and (max-width: 576px) {
+            height: 20%;
+            width: 45%;
+            bottom: 4%;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            display: block;
+            border: 1px dashed $white;
+            width: calc(100% - $index);
+            height: calc(100% - $index);
+            border-radius: 22px;
+            z-index: 0;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-size: 22px;
+        font-family: $fontSecondary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: calc($index);
+        z-index: 1;
+        transition: all .5s ease;
+
+        @media screen and (max-width: 991px) {}
+
+        @media screen and (max-width: 767px) {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $red;
+
+            &+.intro__icon {
+                background: $red;
+
+                img {
+                    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%);
+                }
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        border-radius: 15px;
+        width: 48px;
+        height: 48px;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .5s ease;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+
+        img {
+            transition: all .5s ease;
+        }
+    }
+}
+
+.ticker {
+    width: auto;
+    height: 70px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    color: $white;
+    display: flex;
+    align-items: center;
+    margin-top: calc($index * 7);
+    margin-left: -5%;
+    margin-right: -5%;
+    overflow: hidden;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    &__red {
+        background: $red;
+        position: absolute;
+        bottom: calc($index * 1.2);
+        left: 0;
+        right: 0;
+        transform-origin: left center;
+        transform: rotate(calc(-4.5deg)) translateY(calc(-1 * $index / 2));
+
+        .ticker__item {
+            &:before {
+                content: "";
+                display: block;
+                width: 47px;
+                height: 36px;
+                position: absolute;
+                left: -35px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url("../img/logo-white.svg") center center no-repeat;
+            }
+        }
+
+        .ticker__link {
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    &__black {
+        background: $black;
+
+        .ticker__item {
+            &:before {
+                content: "";
+                display: block;
+                width: 33px;
+                height: 31px;
+                position: absolute;
+                left: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url("../img/symbol-white.svg") center center no-repeat;
+            }
+        }
+
+        .ticker__link {
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    &__list {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: 100%;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: $fontSecondary;
+        overflow: hidden;
+    }
+
+    &__item {
+        padding: 0 60px 0 30px;
+        display: flex;
+        width: auto;
+        align-items: center;
+        height: 100%;
+        flex: 1 0 auto;
+        position: relative;
+    }
+
+    &__link {
+        color: $white;
+        transition: all .5s ease;
+    }
+}
